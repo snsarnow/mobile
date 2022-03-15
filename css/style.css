@@ -1,31 +1,51 @@
 
 body{
-    font-family: Arial, sans-serif, Arial, Helvetica;
+    font-family: 'Playfair Display', serif;
     font-size: 18px;
+    background-image: url("../images/backgroundimg.jpg");
+    background-color: rgb(207, 210, 212);
 
 }
 
 header{
-    text-align:center;
+    display: grid;
+    grid-template: 1/1/span 2/span 4;
+    row-gap: 10%;
+  }
+
+  .skip{
+    display: none;
 }
 
+header nav{
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+}
+
+.nav{
+    padding: 25px 10px;   
+    list-style-type: none;      
+  }
+  
 nav li{
-	background-color: #FF5CBB;
-	padding:10px;
-	width:25%;
-	border:1px solid #f1077c;
-	display: inline-block;
-	width: 20%;
-    font-weight: bold;
+    display: inline;
+    margin: 2%;
 }
 
-nav li a{
-    color: black; 
-    text-decoration: underline;
-}
+.nav li a{
+    color: white;
+    text-decoration: none;
     
+}
+
+.active a:visited{
+    color: #f369ba;
+    font-weight: bolder;
+    
+}
 
 h1{
+    text-align: center;
     font-size: 36px;
     font-style: oblique;
     font-weight: bolder;
@@ -38,37 +58,25 @@ h2{
 
 p{
     text-align: center;
-    line-height: 25px;
-    
+    line-height: 25px;  
 }
 
 img{
-    border: 5px solid black;
+    border: 3px solid rgb(231, 231, 231);
     padding: 3px;
     margin: 10px;
-    border-radius: 5px;
-    
-
 }
 
 footer{
-    background: #FF5CBB;
+    background: #f369ba;
 }
 
-.active{
-    background: rgb(192, 115, 243);
-    border: 3px dashed rgb(151, 57, 214);
-}
 .celebimgs img{
-    border: 5px solid black;
-    padding: 3px;
     margin: 3px;
 
 }
 
 .cardib img{
-    border: 5px solid black;
-    padding: 3px;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
@@ -88,26 +96,163 @@ footer{
     width:250px;
 }
 
-/*
-img:nth-child(even){
-    border:3px dashed rgb(151, 57, 214);
+/*Animations - NEED HELP*/
+.view {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+
+.view .mask, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.view img {
+    display: block;
+    position: relative
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+
+/* Grid / Flex*/
+/*Index*/
+.hermes{
+    display: grid;
+    grid-template: 1/1/span 2/span 1;
+    align-items: center;
+    justify-content: center;
 
 }
 
-img:nth-child(even):hover{
-    border: 5px dashed #FF5CBB;
+#stackbags{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
+#video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+/* History - NEED TO FIX*/
+.history p{
+    text-align: center;
+    margin: auto;
+}
+.history img{
+    display: inline-block;
 
 }
-
-img:hover{
-    border: 5px dashed #FF5CBB;
+/* Celeb */
+.celebimgs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
-*/
 
+.cardib img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
 
+/* Specialty */
 .special {
     display: grid;
     grid-template: 1/1/2/2;
     row-gap: 50px;
     justify-content: center;
 }
+
+/*Contact Us*/
+fieldset{
+    display: grid;
+    grid-template: 1/ 1/ span 7/ span 1;
+    row-gap: 10px;
+}
+
+#fname{
+    grid: 1/1/2/2;
+    margin: auto;
+}
+
+#lname{
+    grid: 2/1/3/2;
+    margin: auto;
+}
+
+#email{
+    grid: 3/1/4/2;
+    margin: auto;
+}
+
+#phone{
+    grid: 4/1/5/2;
+    margin: auto;
+}
+
+#message{
+    grid: 5/1/6/2;
+    margin: auto;
+}
+
+#submit{
+    grid: 6/1/7/2;
+    margin: auto;
+}
+label, input{
+    display: inline-block;
+  }
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*
+Add at least one background image - COMPLETED
+Utilize a Google Font - COMPLETED
+Contact page that uses a form.  (The form doesn't need to work yet) - COMPLETED
+
+Add font Awesome icons.  (The footer and/or contact form is a great location.) - INSERTED BUT NOT UTILIZED  
+
+
+Animation - Specialty page 
+Google analytics - COMPLETED NEED SS
+Use flex and grid 
+
+Questions: 
+Font Awesome Icon not working
+Is header css redundant - is there a way to simplify
+Stop nav bar from adjusting
+Tab to main content
+Video won't connect
+
+Reminder: your content should all still be there! You can add content if you want, but make sure it passes validators. If you did not include the nth child elements before, don't worry about adding them in now. However, you should still have your content in place!
+*/
+

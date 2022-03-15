@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+   <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL4DRVC27D"></script>
@@ -24,28 +30,47 @@
     <a class = "skip" href=#main>Skip to Main Content</a>
     <header>
         <nav>
-            <ul>
+            <ul class="nav">
+                
                 <li class = "active"><a href = "index.html">What is a Birkin</a></li>
                 <li><a href = "history.html">History of the Birkin</a></li>
                 <li><a href = "celebrities.html">Celebrities and the Birkin</a></li>
 				<li><a href = "specialty.html">Specialty Birkins</a></li>
+                <li><a href = "contact.html">Contact Us</a></li>
+                
             </ul>
         </nav>
-        <h1>What is a Birkin Bag?</h1>
+        <h1>What is a Birkin Bag?</h1></header>
+        </br>
     </header>
     <main id="main">
-      <img src="images/hermes_storefront.jpg" alt="Hermès Storefront" width="200"/>
-      <img src="images/hermes_display.jpg" alt="Hermès Display" width="200"/>
-
+      <div class="hermes">
+        <img src="images/hermes_storefront.jpg" alt="Hermès Storefront" width="200"/>
+        <img src="images/hermes_display.jpg" alt="Hermès Display" width="200"/>
+      </div>
       <p>Hermès, is a French luxury design house established in 1837. In 1984, Hermès released the Birkin bag. They are amongst some of the most expensive bags in the world, ranging anywhere from $9,000 to half a million dollars. The bags embody absolute luxury and is even considered by some to be a better investment than gold or the stock market.</p>
-
-      <img src="images/three_birkins.jpg" alt="Three Birking Bags" width="200"/>
+      
+      <div id="stackbags">
+        <img src="images/three_birkins.jpg" alt="Three Birking Bags" width="200"/>
+      </div>
     
-      <p>But, you can't just walk into a store to get one. You either have to be very wealthy, very important, or can try these tips that Noorie Ana used to get hers: (INSERT VIDEO)</p>
+      <div id="video">
+        <p>But, you can't just walk into a store to get one. You either have to be very wealthy, very important, or can try these tips that Noorie Ana used to get hers:</p>
+        <iframe width="420" height="315"
+            src="https://www.youtube.com/watch?v=BdOACNGjisE">
+      </iframe>
+      </div>
     </main>
+    </br>
     <footer>
         <p>Sophia Sarnowski &copy; 2022</p>
+        <i class="fa-solid fa-bag-shopping"></i>
+        <i class="fa-solid fa-timeline"></i>
+        <i class="fa-solid fa-face-grin"></i>
+        <i class="fa-solid fa-gem"></i>
+        <i class="fa-solid fa-message-dots"></i>
   
     </footer>
+
 </body>
 </html>
