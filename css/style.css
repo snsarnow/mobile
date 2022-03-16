@@ -1,64 +1,59 @@
 
 body{
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+    font-size: 1.25em;
     background-image: url("../images/backgroundimg.jpg");
     background-color: rgb(207, 210, 212);
-
-}
-
-header{
-    display: grid;
-    grid-template: 1/1/span 2/span 4;
-    row-gap: 10%;
-  }
-
-  .skip{
-    display: none;
 }
 
 header nav{
     text-align: center;
     background-color: rgb(231, 231, 231);
+    padding: 25px 10px;     
 }
 
-.nav{
-    padding: 25px 10px;   
-    list-style-type: none;      
-  }
-  
 nav li{
     display: inline;
+    position: relative;
     margin: 2%;
 }
 
-.nav li a{
+nav li a{
     color: white;
     text-decoration: none;
     
 }
 
 .active a:visited{
-    color: #f369ba;
+    color: #ee1c96;
     font-weight: bolder;
     
 }
 
+.skip{
+    position: relative;
+    left: -500px;
+}
+
 h1{
     text-align: center;
-    font-size: 36px;
+    font-size: 2.5em;
     font-style: oblique;
     font-weight: bolder;
+    color: #ee1c96;
+    animation: mymove 5s; 
+    
 }
 
 h2{
-    font-size: 24px;
+    font-size: 2em;
     font-weight: bold;
 }
 
 p{
-    text-align: center;
-    line-height: 25px;  
+
+    text-align: center; 
+    line-height: 1.25em;
 }
 
 img{
@@ -67,9 +62,15 @@ img{
     margin: 10px;
 }
 
-footer{
-    background: #f369ba;
+iframe{
+    height: 10%;
+    width: 25%
 }
+footer{
+    background: rgb(231, 231, 231);
+    color: white;
+}
+
 
 .celebimgs img{
     margin: 3px;
@@ -97,75 +98,44 @@ footer{
 }
 
 /*Animations - NEED HELP*/
-.view {
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-    float: left;
-    border: 10px solid #fff;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-    background: #fff url(../images/bgimg.jpg) no-repeat center center
-}
+@keyframes mymove {
+    from {width: 50%; opacity: 0; color: white;}
+    to {width: 50%; opacity: 1; color: #ee1c96;}
+  }
 
-.view .mask, .view .content {
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0
-}
+@media screen and (prefers-reduced-motion){
+    h1{
+      animation: none;
+    }
+  }
 
-.view img {
-    display: block;
-    position: relative
-}
-.view p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 12px;
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center
-}
-
-/* Grid / Flex*/
+/* Grid AND Flex*/
 /*Index*/
 .hermes{
     display: grid;
-    grid-template: 1/1/span 2/span 1;
+    grid-template-rows: 1/ span 5;
     align-items: center;
     justify-content: center;
 
 }
 
-#stackbags{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-  }
-
-#video{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-/* History - NEED TO FIX*/
-.history p{
-    text-align: center;
+.hermes img, .hermes iframe{
     margin: auto;
 }
+
+/* History - NEED TO FIX*/
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .history img{
     display: inline-block;
-
+    margin: auto;
 }
+
 /* Celeb */
 .celebimgs{
     display: flex;
@@ -238,20 +208,19 @@ textarea{
 Add at least one background image - COMPLETED
 Utilize a Google Font - COMPLETED
 Contact page that uses a form.  (The form doesn't need to work yet) - COMPLETED
+Google analytics - COMPLETED
 
 Add font Awesome icons.  (The footer and/or contact form is a great location.) - INSERTED BUT NOT UTILIZED  
+Animation - NEED HELP 
 
-
-Animation - Specialty page 
-Google analytics - COMPLETED NEED SS
 Use flex and grid 
 
 Questions: 
 Font Awesome Icon not working
-Is header css redundant - is there a way to simplify
 Stop nav bar from adjusting
 Tab to main content
-Video won't connect
+Contact Us Footer
+Video sizing - responsive design 
 
 Reminder: your content should all still be there! You can add content if you want, but make sure it passes validators. If you did not include the nth child elements before, don't worry about adding them in now. However, you should still have your content in place!
 */
