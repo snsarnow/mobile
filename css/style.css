@@ -8,7 +8,7 @@ body{
 
 header nav{
     text-align: center;
-    background-color: rgb(231, 231, 231);
+    background-color: #92919181;
     padding: 25px 10px;     
 }
 
@@ -25,7 +25,7 @@ nav li a{
 }
 
 .active a:visited{
-    color: #ee1c96;
+    color: #a0005d;
     font-weight: bolder;
     
 }
@@ -35,12 +35,17 @@ nav li a{
     left: -500px;
 }
 
+.skip:focus{
+    left: 0px;
+}
+
 h1{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 2.5em;
     font-style: oblique;
     font-weight: bolder;
-    color: #ee1c96;
+    color: #a0005d;
     animation: mymove 5s; 
     
 }
@@ -51,26 +56,39 @@ h2{
 }
 
 p{
-
     text-align: center; 
     line-height: 1.25em;
 }
 
 img{
-    border: 3px solid rgb(231, 231, 231);
+    border: 3px solid #92919181;
     padding: 3px;
     margin: 10px;
 }
 
-iframe{
-    height: 10%;
-    width: 25%
-}
 footer{
-    background: rgb(231, 231, 231);
+    background: #92919181;
     color: white;
+    width: 100%;
 }
 
+.video{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 100px;
+  padding-top: 56.25%;
+}
+
+iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+}
 
 .celebimgs img{
     margin: 3px;
@@ -92,15 +110,47 @@ footer{
 }
 
 .special img{
-    border: none;
     height: 200px;
     width:250px;
 }
 
-/*Animations - NEED HELP*/
+.fa-bag-shopping::before{
+    font-weight: 900;
+    content: "f290";
+}
+
+input{
+    display:inline-block;
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+label{
+    display: inline-block;
+}
+input[type=file]{
+    border: none;
+}
+input[type=submit]{
+    background-color: #a0005d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Animations*/
 @keyframes mymove {
-    from {width: 50%; opacity: 0; color: white;}
-    to {width: 50%; opacity: 1; color: #ee1c96;}
+    from {opacity: 0; color: white; scale: (1,1); font-size: 0em;}
+    to {opacity: 1; color: #a0005d; scale: (2,2); font-size: 2em;}
   }
 
 @media screen and (prefers-reduced-motion){
@@ -109,31 +159,30 @@ footer{
     }
   }
 
+
+
 /* Grid AND Flex*/
 /*Index*/
-.hermes{
-    display: grid;
-    grid-template-rows: 1/ span 5;
-    align-items: center;
+.hermesimgs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-
+    
 }
 
-.hermes img, .hermes iframe{
+#stackedbags{
     margin: auto;
+    display: flex;
 }
+
 
 /* History - NEED TO FIX*/
 .history {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-}
-
-.history img{
-    display: inline-block;
-    margin: auto;
 }
 
 /* Celeb */
@@ -144,7 +193,7 @@ footer{
     justify-content: center;
 }
 
-.cardib img{
+.cardib{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -160,9 +209,13 @@ footer{
 }
 
 /*Contact Us*/
+.contact_main{
+    min-height: 450px;
+}
+
 fieldset{
     display: grid;
-    grid-template: 1/ 1/ span 7/ span 1;
+    grid-template: 1/ 1/ span 8/ span 1;
     row-gap: 10px;
 }
 
@@ -191,16 +244,14 @@ fieldset{
     margin: auto;
 }
 
+#insert_pic{
+    grid: 7/1/8/2;
+    margin: auto;
+}
+
 #submit{
     grid: 6/1/7/2;
     margin: auto;
-}
-label, input{
-    display: inline-block;
-  }
-
-textarea{
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -209,19 +260,15 @@ Add at least one background image - COMPLETED
 Utilize a Google Font - COMPLETED
 Contact page that uses a form.  (The form doesn't need to work yet) - COMPLETED
 Google analytics - COMPLETED
+Animation - COMPLETED
+Use flex and grid - COMPLETED
+Add font Awesome icons - COMPLETED
 
-Add font Awesome icons.  (The footer and/or contact form is a great location.) - INSERTED BUT NOT UTILIZED  
-Animation - NEED HELP 
-
-Use flex and grid 
 
 Questions: 
 Font Awesome Icon not working
-Stop nav bar from adjusting
-Tab to main content
-Contact Us Footer
-Video sizing - responsive design 
+Footer
+Aria labels
 
-Reminder: your content should all still be there! You can add content if you want, but make sure it passes validators. If you did not include the nth child elements before, don't worry about adding them in now. However, you should still have your content in place!
 */
 

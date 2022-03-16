@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/62a7ad2907.js" crossorigin="anonymous"></script>
 
    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +32,7 @@
     <header>
         <nav>
             <ul class="nav">
-                
+                <li><i class="fa-solid fa-bag-shopping"></i></li>
                 <li><a href = "index.html">What is a Birkin</a></li>
                 <li><a href = "history.html">History of the Birkin</a></li>
                 <li><a href = "celebrities.html">Celebrities and the Birkin</a></li>
@@ -45,7 +46,7 @@
     </header>
         </br>
     </header>
-        <main id="main">
+        <main class="contact_main" id="main">
         <form
         action="https://formspree.io/f/xnqwzdwv"
         method="POST">
@@ -74,6 +75,11 @@
                 <div id="message">
                 <label for="message">Leave a Message:</label>
                 <textarea name="message" id="message"></textarea>
+                </div>
+
+                <div id="insert_pic">
+                <label for="insertpic">Share a Picture of your Birkin Bag:</label>
+                <input type="file" name="insertpic" id="insertpic">
                 </div>
                 <div id="submit">
                 <input type="submit"  value="Submit">
