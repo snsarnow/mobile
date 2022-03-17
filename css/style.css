@@ -44,9 +44,10 @@ nav li a{
 }
 
 h1{
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
+    text-align: center;
+    /*display: flex;
+    justify-content: center;*/
+    font-size: 1.5em;
     font-style: oblique;
     font-weight: bolder;
     color: #a0005d;
@@ -76,22 +77,10 @@ footer{
     width: 100%;
 }
 
-.video{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: auto;
-  padding-top: 56.25%;
-}
-
 iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: auto;
-  height: 100%;
+  margin: auto;
+  width: 85%;
+  display: block;
 }
 
 .celebimgs img{
@@ -120,11 +109,9 @@ iframe{
 
 .fa-bag-shopping::before{
     font-weight: 900;
-    content: "f290";
 }
 
 input{
-    display:inline-block;
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -133,9 +120,8 @@ input{
 }
 
 label{
-    display: inline-block;
+    text-align: center;
 }
-
 input[type=file]{
     border: none;
 }
@@ -143,11 +129,9 @@ input[type=file]{
 input[type=submit]{
     background-color: #a0005d;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%
+    width: 100%;
 }
 
 textarea{
@@ -210,8 +194,8 @@ textarea{
 /* Specialty */
 .special {
     display: grid;
-    grid-template: 1/1/2/2;
-    row-gap: 3%;
+    grid-template-columns: 1fr;
+    row-gap: 3px;
     justify-content: center;
 }
 
@@ -220,46 +204,14 @@ textarea{
     min-height: 450px;
 }
 
-fieldset{
+fieldset > div{
     display: grid;
-    grid-template: 1/ 1/ span 8/ span 1;
-    row-gap: 3%;
+    grid-template-columns: 1fr 2fr;
+
 }
 
-#fname{
-    grid: 1/1/2/2;
-    margin: auto;
-}
 
-#lname{
-    grid: 2/1/3/2;
-    margin: auto;
-}
 
-#email{
-    grid: 3/1/4/2;
-    margin: auto;
-}
-
-#phone{
-    grid: 4/1/5/2;
-    margin: auto;
-}
-
-#message{
-    grid: 5/1/6/2;
-    margin: auto;
-}
-
-#insert_pic{
-    grid: 7/1/8/2;
-    margin: auto;
-}
-
-#submit{
-    grid: 6/1/7/2;
-    margin: auto;
-}
 
 
 /*
@@ -273,13 +225,7 @@ Add font Awesome icons - COMPLETED
 
 
 Questions: 
-Axe Color Contrast
 Aria labels
-Cookie Errors
-Aligning Video
-H1 on Mobile View
-Inline-Block for Form
-
 
 
 */
