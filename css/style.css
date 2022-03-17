@@ -1,7 +1,7 @@
 
 body{
     font-family: 'Playfair Display', serif;
-    font-size: 1.25em;
+    font-size: 1em;
     background-image: url("../images/backgroundimg.jpg");
     background-color: rgb(207, 210, 212);
 }
@@ -30,19 +30,23 @@ nav li a{
     
 }
 
-.skip{
+/*.skip{
     position: relative;
     left: -500px;
 }
 
 .skip:focus{
     left: 0px;
+}*/
+
+.skip{
+    display: none;
 }
 
 h1{
     display: flex;
     justify-content: center;
-    font-size: 2.5em;
+    font-size: 2em;
     font-style: oblique;
     font-weight: bolder;
     color: #a0005d;
@@ -57,7 +61,7 @@ h2{
 
 p{
     text-align: center; 
-    line-height: 1.25em;
+    line-height: 1 em;
 }
 
 img{
@@ -76,7 +80,7 @@ footer{
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin: 100px;
+  margin: auto;
   padding-top: 56.25%;
 }
 
@@ -127,12 +131,15 @@ input{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
 label{
     display: inline-block;
 }
+
 input[type=file]{
     border: none;
 }
+
 input[type=submit]{
     background-color: #a0005d;
     color: white;
@@ -266,9 +273,14 @@ Add font Awesome icons - COMPLETED
 
 
 Questions: 
-Font Awesome Icon not working
-Footer
+Axe Color Contrast
 Aria labels
+Cookie Errors
+Aligning Video
+H1 on Mobile View
+Inline-Block for Form
+
+
 
 */
 
