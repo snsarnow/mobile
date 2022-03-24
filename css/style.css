@@ -136,7 +136,7 @@ textarea{
 /*Animations*/
 @keyframes mymove {
     from {opacity: 0; color: white; scale: (1,1); font-size: 0em;}
-    to {opacity: 1; color: #a0005d; scale: (2,2); font-size: 1.5em;}
+    to {opacity: 1; color: #a0005d; scale: (2,2); font-size: 1em;}
   }
 
 @media screen and (prefers-reduced-motion){
@@ -197,7 +197,7 @@ textarea{
 
 /*Contact Us*/
 .contact_main{
-    min-height: 450px;
+    min-height: 600px;
 }
 
 fieldset > div{
@@ -231,10 +231,6 @@ Google analytics - COMPLETED
 Animation - COMPLETED
 Use flex and grid - COMPLETED
 Add font Awesome icons - COMPLETED
-
-
-Questions: 
-Center submit button
 
 */
 
